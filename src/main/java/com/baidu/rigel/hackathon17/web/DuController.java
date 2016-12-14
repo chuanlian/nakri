@@ -21,26 +21,17 @@ public class DuController {
     @Resource(name = "duService")
     private DuService duService;
 
-    @ResponseBody
-    @RequestMapping(method = {RequestMethod.GET}, value = "/sayHi")
-    public Object sayHi(String name) {
-        String greeting = duService.sayHi(name);
-        return greeting;
-    }
 
     @ResponseBody
-    @RequestMapping(value = "/sayHello", method = RequestMethod.POST)
-    public Object sayHello(String name) {
-        String greeting = duService.sayHi(name);
-        return greeting;
+    @RequestMapping(value = "/ask", method = {RequestMethod.POST})
+    public Object askQuestions(String question) {
+        String answer;
+        try {
+            answer = duService.askQuestions(question);
+        } catch (Exception ex) {
+            answer = "请输入问题";
+        }
+        return answer;
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/hello_list.do", method = RequestMethod.POST)
-    public Object helloList() {
-        StringBuilder str = new StringBuilder("{totalProperty:100,root:[");
-        str.append("{id:4, name:'생활', descn:'Китай'},");
-        str.append("{id:5, name:'tchen8', descn:'中文'}]}");
-        return str;
-    }
 }

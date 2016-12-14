@@ -9,4 +9,12 @@ package com.baidu.rigel.hackathon17.service;
 public interface DuService {
 
     String sayHi(String name);
+
+    /**
+     * 根据问题返回答案
+     *
+     * @param question
+     * @return
+     */
+    String askQuestions(String question);
 }

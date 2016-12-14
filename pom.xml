@@ -259,5 +259,17 @@
             <version>${com.fasterxml.version}</version>
         </dependency>
 
+        <!--切词工具-->
+        <dependency>
+            <groupId>ik-analyzer</groupId>
+            <artifactId>ik-analyzer</artifactId>
+            <version>1.0</version>
+        </dependency>
+       <!-- <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>3.6.1</version>
+        </dependency>-->
+
     </dependencies>
 </project>

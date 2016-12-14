@@ -21,6 +21,33 @@
     <mvc:resources mapping="/js2/**" location="/js/"/>
 
 
+    <!-- 处理请求返回json字符串的中文乱码问题 -->
+    <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager">
+        <mvc:message-converters register-defaults="true">
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8"/>
+            </bean>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="prettyPrint" value="true"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <property name="mediaTypes">
+            <value>
+                json=application/json
+                xml=application/xml
+            </value>
+        </property>
+    </bean>
+
+    <!-- mvc映射器 -->
+    <mvc:annotation-driven/>
+
+
+    <!-- 自动检测bean -->
+    <context:component-scan base-package="com.baidu.rigel"></context:component-scan>
 
 
     <!--   视图映射规则 -->
