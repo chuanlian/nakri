@@ -21,6 +21,8 @@
     <mvc:resources mapping="/js2/**" location="/js/"/>
 
 
+
+
     <!--   视图映射规则 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"/>
