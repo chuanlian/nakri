@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.baidu.rigel.cust.mapping.CustMapper">
-    <resultMap id="SimpleResultMap" type="com.baidu.rigel.cust.vo.CustQueryVo">
+<mapper namespace="com.baidu.rigel.jichuang.mapping.CustMapper">
+    <resultMap id="SimpleResultMap" type="com.baidu.rigel.jichuang.vo.CustQueryVo">
         <id column="id" property="custId" jdbcType="BIGINT"/>
         <result column="cust_name" property="companyName" jdbcType="VARCHAR"/>
         <result column="cust_category" property="custCategory" jdbcType="INTEGER"/>
@@ -11,7 +11,7 @@
         <result column="status" property="status" jdbcType="INTEGER"/>
         <result column="tradeDesc" property="tradeDesc" jdbcType="VARCHAR"/>
     </resultMap>
-    <select id="getCustList" parameterType="com.baidu.rigel.cust.vo.CustQueryCondition" resultMap="SimpleResultMap">
+    <select id="getCustList" parameterType="com.baidu.rigel.jichuang.vo.CustQueryCondition" resultMap="SimpleResultMap">
         select a.id,a.cust_category,a.cust_name,a.cust_type,a.source,a.trade,a.status,b.name as tradeDesc
         from tb_cust a
         LEFT JOIN tb_trade b on a.trade=b.id

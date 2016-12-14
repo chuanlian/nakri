@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.baidu.rigel.cust.vo.CustQueryVo" %>
+<%@ page import="com.baidu.rigel.jichuang.vo.CustQueryVo" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%--
   ~ Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
@@ -220,7 +220,7 @@
 			// 图点击事件
 			function eConsole (param) {
 	            if (param.data.id === '1') {
-	                location.href = '/Nakri/cust/custList';
+	                location.href = '/Nakri/jichuang/custList';
 	            }
 			}
 

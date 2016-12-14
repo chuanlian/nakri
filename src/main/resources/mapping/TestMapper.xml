@@ -3,7 +3,7 @@
   ~ Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
   -->
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.baidu.rigel.cust.mapping.TestMapper">
+<mapper namespace="com.baidu.rigel.jichuang.mapping.TestMapper">
     <select id="getTests" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>

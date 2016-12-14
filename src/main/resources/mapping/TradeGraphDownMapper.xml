@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.baidu.rigel.cust.mapping.TradeGraphDownMapper">
+<mapper namespace="com.baidu.rigel.jichuang.mapping.TradeGraphDownMapper">
 
     <select id="queryTradeDownByTradeId" resultMap="BaseResultMap" parameterType="java.lang.Long">
         select

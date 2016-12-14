@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.baidu.rigel.cust.vo.CustQueryVo" %>
+<%@ page import="com.baidu.rigel.jichuang.vo.CustQueryVo" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -512,7 +512,7 @@
             var formData = $('#queryForm').serialize();
             formData = queryToJson(formData);
             $.ajax({
-                url: '/Nakri/cust/query',
+                url: '/Nakri/jichuang/query',
                 method: 'post',
                 data: formData,
                 success: function (res) {

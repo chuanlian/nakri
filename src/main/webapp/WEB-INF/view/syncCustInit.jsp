@@ -710,7 +710,7 @@
         }).on('finished', function(e) {
             $.ajax({
                 type: 'POST',
-                url: "/Nakri/cust/syncCust" ,
+                url: "/Nakri/jichuang/syncCust" ,
                 data: "" ,
                 success: function(data) {
                     bootbox.dialog({

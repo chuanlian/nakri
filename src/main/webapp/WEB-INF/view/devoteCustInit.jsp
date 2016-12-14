@@ -712,7 +712,7 @@
         }).on('finished', function(e) {
             $.ajax({
                 type: 'POST',
-                url: "/Nakri/cust/devote" ,
+                url: "/Nakri/jichuang/devote" ,
                 data: "" ,
                 success: function(data) {
                     bootbox.dialog({
