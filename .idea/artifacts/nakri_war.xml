@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="nakri:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Nakri.war">
+      <element id="artifact" artifact-name="nakri:war exploded" />
+    </root>
+  </artifact>
+</component>

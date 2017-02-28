@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baidu.rigel.jichuang.mapping.CustMapper">
+    <resultMap id="SimpleResultMap" type="com.baidu.rigel.jichuang.vo.CustQueryVo">
+        <id column="id" property="custId" jdbcType="BIGINT"/>
+        <result column="cust_name" property="companyName" jdbcType="VARCHAR"/>
+        <result column="cust_category" property="custCategory" jdbcType="INTEGER"/>
+        <result column="cust_type" property="custType" jdbcType="INTEGER"/>
+        <result column="source" property="source" jdbcType="INTEGER"/>
+        <result column="trade" property="trade" jdbcType="INTEGER"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="tradeDesc" property="tradeDesc" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="getCustList" parameterType="com.baidu.rigel.jichuang.vo.CustQueryCondition" resultMap="SimpleResultMap">
+        select a.id,a.cust_category,a.cust_name,a.cust_type,a.source,a.trade,a.status,b.name as tradeDesc
+        from tb_cust a
+        LEFT JOIN tb_trade b on a.trade=b.id
+        where 1=1
+        <if test="companyName != null">
+            and a.cust_name = #{companyName,jdbcType=VARCHAR}
+        </if>
+        <if test="custCategory != null and custCategory &gt;= 0">
+            and a.cust_category = #{custCategory,jdbcType=INTEGER}
+        </if>
+        <if test="trade != null and trade &gt;= 0">
+            and a.trade = #{trade,jdbcType=INTEGER}
+        </if>
+        <if test="custType != null and custType &gt;= 0">
+            and a.cust_type = #{custType,jdbcType=BIGINT}
+        </if>
+        <if test="source != null and source &gt;= 0">
+            and a.source = #{source,jdbcType=BIGINT}
+        </if>
+        order by a.id desc
+        limit 100
+    </select>
+
+    <select id="selectCustOne" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_cust_all
+        limit 1
+    </select>
+
+    <select id="getCustsByIds" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_cust
+        where id in
+        <foreach collection="custIds" item="id" open="(" close=")" separator=",">
+            #{id, jdbcType=BIGINT}
+        </foreach>
+    </select>
+
+
+    <select id="getCustById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_cust
+        where id = #{custId, jdbcType=BIGINT}
+
+    </select>
+    <select id="syncUpCusts">
+         INSERT  INTO  tb_cust  SELECT  * FROM  tb_cust_all where cust_category=1 and id not in (select id from tb_cust) limit 10;
+    </select>
+    <select id="syncDownCusts">
+         INSERT  INTO  tb_cust  SELECT  * FROM  tb_cust_all where cust_category=2 and id not in (select id from tb_cust) limit 10;
+    </select>
+
+</mapper>

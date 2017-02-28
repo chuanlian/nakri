@@ -1,0 +1,7 @@
+#surefire
+#Tue Feb 28 10:08:19 CST 2017
+jetty.port=8044
+user.dir=D\:\\workspace\\github\\nakri
+idea.version=2016.1.4
+localRepository=C\:\\Users\\yangchuanlian\\.m2\\repository
+basedir=D\:\\workspace\\github\\nakri
