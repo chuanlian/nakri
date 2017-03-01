@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (C) 2016 Baidu, Inc. All Rights Reserved.
+  -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baidu.rigel.jichuang.mapping.ReachResultMapper">
+    <select id="getReachResultByCustIds" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tb_reach_result WHERE relation_id IN
+        <foreach collection="custIds" item="id" open="(" close=")" separator=",">
+            #{id, jdbcType=BIGINT}
+        </foreach>
+    </select>
+
+
+    <select id="getReachResultsByStateAndReachCategory" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tb_reach_result WHERE state = #{state, jdbcType=BIGINT} AND reach_category =
+        #{reachCategory, jdbcType=BIGINT} ORDER BY id DESC
+    </select>
+</mapper>
