@@ -12,7 +12,7 @@
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    天使之翼
+                    营销知我
                 </small>
             </a>
         </div>
@@ -20,14 +20,14 @@
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
                 <li class="light-blue">
-                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                    <%--<a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <img class="nav-user-photo" src="/Nakri/avatars/user.jpg" alt="Jason's Photo"/>
 								<span class="user-info">
 									<small>Welcome</small>
 									天使快递
 								</span>
                         <i class="icon-caret-down"></i>
-                    </a>
+                    </a>--%>
 
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
