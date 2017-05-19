@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  ~ Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
+  -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baidu.rigel.hackathon18.mapping.FeedMapper">
+
+    <select id="getFeedList" parameterType="com.baidu.rigel.hackathon18.vo.FeedQueryCondition"
+            resultMap="BaseResultMap">
+        select *
+        from tb_feed a
+        where 1=1
+        order by a.id desc
+    </select>
+
+</mapper>

@@ -140,7 +140,7 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="icon-home home-icon"></i>
-                        <a href="/Nakri/showHome">Home</a>
+                        <a href="#">Home</a>
                     </li>
 
                     <li>
@@ -168,7 +168,7 @@
                         <!-- PAGE CONTENT BEGINS -->
                         <div class="row12">
                             <div class="well">
-                                <form action="/Nakri/cust/custList" method="post" id="queryForm" class="form-inline">
+                                <form action="#" method="post" id="queryForm" class="form-inline">
                             <span class="input-icon align-middle">
                             客户名称：
                             <input id="companyName" name="companyName" type="text" class="search-query"
@@ -176,40 +176,22 @@
                             </span>
                                     &nbsp;
                                     <span class="input-icon align-middle">
-                            客户种类：
-                            <select class="form-control-inline" id="custCategory" name="custCategory">
+                            意向度得分：
+                            <select class="form-control-inline" id="operType" name="operType">
                                     <option value="-1" selected>请选择</option>
-                                    <option value="1">下游目标客户</option>
-                                    <option value="2">上游供应商</option>
+                                    <option value="1">大于</option>
+                                    <option value="2">小于</option>
+                                    <option value="3">等于</option>
                                 </select>
+                                         <input id="score" name="score" type="text" class="search-query"
+                                                placeholder="请输入分值"/>
                             </span>
                                     &nbsp;
-                                    <span class="input-icon align-middle">
-                            客户类型：
-                            <select class="form-control-inline" id="custType" name="custType">
-                                 <option value="-1" selected>请选择</option>
-                                <option value="0">普通企业</option>
-                                <option value="1">特殊企业</option>
-                                <option value="2">个人客户</option>
-                                <option value="3">广告代理</option>
-                                <option value="4">政府组织</option>
-                                </select>
-                            </span>
-                                    &nbsp;
-                                    <%--<span class="input-icon align-middle">
-                                    来源：
-                                    <select class="form-control-inline" id="source" name="source">
-                                            <option value="1">自上传</option>
-                                            <option value="2">信任网络</option>
-                                            <option value="3">加v客户</option>
-                                        <option value="4">c2b客户</option>
-                                        </select>
-                                    </span>--%>
                                     <button class="btn btn-sm" type="submit">
                                         <i class="icon-search"></i>查询
                                     </button>
-                                    <a href="/Nakri/cust/addCustInitNew" class="btn btn-sm btn-info">
-                                        <i class="icon-edit"></i>录入
+                                    <a href="#" class="btn btn-sm btn-info">
+                                        <i class="icon-edit"></i>分析
                                     </a>
                                 </form>
                             </div>
@@ -221,27 +203,21 @@
                                         <thead>
                                         <tr>
                                             <th class="center">
-                                                <label>
-                                                    <input type="checkbox" class="ace"/>
-                                                    <span class="lbl"></span>
-                                                </label>
+                                                选择
                                             </th>
-                                            <th>公司/个人名称</th>
-                                            <th>公司/个人种类</th>
-                                            <th class="hidden-480">资料来源</th>
-
-                                            <th>
-                                                <%--<i class="icon-time bigger-110 hidden-480"></i>--%>
-                                                客户类型
-                                            </th>
-                                            <th class="hidden-480">状态</th>
-
-                                            <th></th>
+                                            <th>公司名称</th>
+                                            <th>所属行业</th>
+                                            <th>地域</th>
+                                            <th>是否来电咨询</th>
+                                            <th>是否做过推广</th>
+                                            <th>竞品投放广告</th>
+                                            <th>资料来源</th>
+                                            <th>操作</th>
                                         </tr>
                                         </thead>
 
                                         <tbody>
-                                        <c:forEach items="${custList}" var="p">
+                                        <c:forEach items="${feedList}" var="p">
                                             <tr>
                                                 <td class="center">
                                                     <label>
@@ -253,89 +229,43 @@
                                                 <td>
                                                     <a href="#">${p.companyName}</a>
                                                 </td>
+
                                                 <td>
-                                                    <c:if test="${p.custCategory== 1}">
-                                                        <span class="label label-sm label-warning">${p.custCategoryDesc}</span>
-                                                    </c:if>
-                                                    <c:if test="${p.custCategory == 2}">
-                                                        <span class="label label-sm label-success">${p.custCategoryDesc}</span>
-                                                    </c:if>
-
+                                                    <a href="#">${p.trade}</a>
                                                 </td>
 
-                                                <td>${p.sourceDesc}</td>
-
-                                                <td class="hidden-480">
-                                                        ${p.custTypeDesc}
-                                                </td>
-                                                <td class="hidden-480">
-                                                    <c:if test="${p.status== 0}">
-                                                        <span class="label label-sm label-info arrowed arrowed-righ">${p.statusDesc}</span>
-                                                    </c:if>
-                                                    <c:if test="${p.status == 1}">
-                                                        <span class="label label-sm label-inverse arrowed-in">${p.statusDesc}</span>
-                                                    </c:if>
-
+                                                <td>
+                                                    <a href="#">${p.address}</a>
                                                 </td>
                                                 <td>
-                                                    <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-                                                            <%-- <a class="blue doreach" data-id="${p.custId}">
-                                                                 <i class="icon-leaf"></i>
-                                                             </a>--%>
-                                                        <a id="id-btn-dialog1">
-                                                            <i class="icon-envelope"></i>
-                                                        </a>
-                                                        <div id="dialog-message" class="hide">
-                                                            <p>
-                                                                <span class="input-icon align-middle">
-                                                                    营销方式：
-                                                                    <select class="form-control-inline" id="yxType"
-                                                                            name="yxType" width="200px">
-                                                                        <option value="1" selected>短信</option>
-                                                                        <option value="2">邮件</option>
-                                                                        <option value="3">站内信</option>
-                                                                    </select>
-                                                                </span>
-                                                                </span>
+                                                    <c:if test="${p.isCall== 0}">
+                                                        <span class="label label-sm label-warning">Y</span>
+                                                    </c:if>
+                                                    <c:if test="${p.isCall == 1}">
+                                                        <span class="label label-sm label-success">N</span>
+                                                    </c:if>
 
-                                                            </p>
-                                                            <p>
-                                                                <span class="input-icon align-middle">
-                                                                营销周期：
-                                                                <select class="form-control-inline" id="yxCycle"
-                                                                        name="yxCycle" width="200px">
-                                                                        <option value="1" selected>1</option>
-                                                                        <option value="2">2</option>
-                                                                        <option value="3">3</option>
-                                                                    </select>天
-                                                                </span>
-                                                            </p>
-                                                            <p>
-                                                                <span class="input-icon align-middle">
-                                                                内容模板：
-                                                                    <textarea id="form-field-11"
-                                                                              class="autosize-transition form-control-inline">[天使快递]为了回馈老用户对我司的大力支持,从12月开始，我司对月快递量超过100的客户，总价打8折优惠，详情请点击：http://dwz.cn/yes</textarea>
-
-                                                                </span>
-                                                            </p>
-                                                        </div>
-                                                        <c:if test="${p.custCategory== 1}">
-                                                            <a class="green" href="/Nakri/touch/touchDetail">
-                                                                <i class="icon-folder-open-alt"></i>
-
-                                                            </a>
-                                                        </c:if>
-                                                        <c:if test="${p.custCategory == 2}">
-                                                            <a class="green"
-                                                               href="/Nakri/upStreamReach/getReachResult">
-                                                                <i class="icon-folder-open-alt"></i>
-                                                            </a>
-                                                        </c:if>
-                                                            <%--<a class="red" href="#">
-                                                                <i class="icon-trash bigger-130"></i>
-                                                            </a>--%>
-                                                    </div>
                                                 </td>
+                                                <td class="hidden-480">
+                                                    <c:if test="${p.isTuiguang== 0}">
+                                                        <span class="label label-sm label-info arrowed arrowed-righ">Y</span>
+                                                    </c:if>
+                                                    <c:if test="${p.isTuiguang == 1}">
+                                                        <span class="label label-sm label-inverse arrowed-in">N</span>
+                                                    </c:if>
+
+                                                </td>
+                                                <td class="hidden-480">
+                                                    <c:if test="${p.isCompetitor== 0}">
+                                                        <span class="label label-sm label-info arrowed arrowed-righ">Y</span>
+                                                    </c:if>
+                                                    <c:if test="${p.isCompetitor == 1}">
+                                                        <span class="label label-sm label-inverse arrowed-in">N</span>
+                                                    </c:if>
+
+                                                </td>
+                                                <td>CDC</td>
+                                                <td></td>
                                             </tr>
                                         </c:forEach>
                                         </tbody>

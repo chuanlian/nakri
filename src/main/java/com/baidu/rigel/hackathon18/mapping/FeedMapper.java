@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2017 Baidu, Inc. All Rights Reserved.
  */
-package com.baidu.rigel.hackathon18.service;
+package com.baidu.rigel.hackathon18.mapping;
 
 import com.baidu.rigel.hackathon18.bo.Feed;
 import com.baidu.rigel.hackathon18.vo.FeedQueryCondition;
@@ -12,9 +12,7 @@ import java.util.List;
 /**
  * Created by yangchuanlian on 2017/5/19.
  */
-public interface FeedService {
+public interface FeedMapper {
 
-
-    List<FeedQueryVo> getFeedList(FeedQueryCondition feedQueryCondition);
-
+    List<Feed> getFeedList(FeedQueryCondition feedQueryCondition);
 }
