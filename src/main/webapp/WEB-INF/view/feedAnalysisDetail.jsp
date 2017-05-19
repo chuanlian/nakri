@@ -166,7 +166,8 @@
                                         <div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
                                             <div class="inline position-relative">
                                                 <a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">
-                                                    <span class="white">北京北达同人投资管理有限公司</span>
+                                                    <span class="white">北京顶好佳誉汽车技术服务有限公司
+</span>
                                                 </a>
 
                                             </div>
@@ -181,7 +182,7 @@
 
                                             <a class="btn btn-link" href="#">
                                                 <i class="icon-globe bigger-125 blue"></i>
-                                                http://www.bdtr.com
+                                                http://www.che133.com/
                                             </a>
                                         </div>
 
@@ -258,7 +259,7 @@
                                             <div class="profile-info-name"> 竞对投放广告 </div>
 
                                             <div class="profile-info-value">
-                                                <a target="_blank" href="http://ad.toutiao.com/tetris/page/52200019344/?ad_id=52232136046&cid=52235852888&req_id=20161117051255010004042210338783
+                                                <a target="_blank" href="http://www.che133.com/
 ">竞对广告</a>
                                             </div>
                                         </div>

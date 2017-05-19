@@ -168,6 +168,7 @@
 
                                             <div class="profile-info-value">
                                                 <span class="editable" id="username">5%</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得分：4.25
                                             </div>
                                         </div>
 
@@ -177,6 +178,7 @@
                                             <div class="profile-info-value">
 
                                                 <span class="editable" id="country">15%</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;得分：12.75
                                             </div>
                                         </div>
 
@@ -185,7 +187,8 @@
 
                                             <div class="profile-info-value">
 
-                                                <span class="editable" id="date">23%</span>
+                                                <span class="editable" id="date">55%</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;得分：46.75
                                             </div>
                                         </div>
 
@@ -194,7 +197,8 @@
                                             <div class="profile-info-name"> 行业 </div>
 
                                             <div class="profile-info-value">
-                                                <span class="editable" id="age">20%</span>
+                                                <span class="editable" id="age">25%</span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;得分：21.25
                                             </div>
                                         </div>
 
