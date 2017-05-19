@@ -203,7 +203,12 @@
                                         <thead>
                                         <tr>
                                             <th class="center">
-                                                选择
+                                            <td class="center">
+                                                <label>
+                                                    <input type="checkbox" class="ace"/>
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </td>
                                             </th>
                                             <th>公司名称</th>
                                             <th>所属行业</th>
