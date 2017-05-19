@@ -4,8 +4,10 @@
 package com.baidu.rigel.hackathon18.service;
 
 import com.baidu.rigel.hackathon18.bo.Feed;
+import com.baidu.rigel.hackathon18.vo.FeedCalcResultVo;
 import com.baidu.rigel.hackathon18.vo.FeedQueryCondition;
 import com.baidu.rigel.hackathon18.vo.FeedQueryVo;
+import com.baidu.rigel.hackathon18.vo.QualityDetailVo;
 
 import java.util.List;
 
@@ -14,6 +16,9 @@ import java.util.List;
  */
 public interface FeedService {
 
+    List<QualityDetailVo> qualityDetail();
+
+    FeedCalcResultVo getFeed(Long id);
 
     List<FeedQueryVo> getFeedList(FeedQueryCondition feedQueryCondition);
 

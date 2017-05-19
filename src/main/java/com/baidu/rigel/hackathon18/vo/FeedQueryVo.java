@@ -10,6 +10,8 @@ import java.io.Serializable;
  */
 public class FeedQueryVo implements Serializable {
 
+    private Long id;
+
     private String companyName;
 
     private String trade;
@@ -23,6 +25,16 @@ public class FeedQueryVo implements Serializable {
     private Integer isCompetitor;
 
     private Integer score;
+
+    private String fromSource;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getCompanyName() {
         return companyName;
@@ -78,5 +90,13 @@ public class FeedQueryVo implements Serializable {
 
     public void setScore(Integer score) {
         this.score = score;
+    }
+
+    public String getFromSource() {
+        return fromSource;
+    }
+
+    public void setFromSource(String fromSource) {
+        this.fromSource = fromSource;
     }
 }

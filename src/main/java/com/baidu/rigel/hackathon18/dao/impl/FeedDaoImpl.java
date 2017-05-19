@@ -21,6 +21,10 @@ public class FeedDaoImpl implements FeedDao {
     @Autowired
     private FeedMapper feedMapper;
 
+    public Feed getFeedById(Long id) {
+        return feedMapper.getFeedById(id);
+    }
+
     public List<Feed> getFeedList(FeedQueryCondition feedQueryCondition) {
         return feedMapper.getFeedList(feedQueryCondition);
     }

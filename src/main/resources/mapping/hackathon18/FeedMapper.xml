@@ -13,4 +13,12 @@
         order by a.id desc
     </select>
 
+
+    <select id="getFeedById" parameterType="com.baidu.rigel.hackathon18.vo.FeedQueryCondition"
+            resultMap="BaseResultMap">
+        select *
+        from tb_feed a
+         where a.id = #{id,jdbcType=BIGINT}
+    </select>
+
 </mapper>

@@ -14,5 +14,7 @@ import java.util.List;
  */
 public interface FeedDao {
 
+    Feed getFeedById(Long id);
+
     List<Feed> getFeedList(FeedQueryCondition feedQueryCondition);
 }

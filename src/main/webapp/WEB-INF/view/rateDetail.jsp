@@ -87,19 +87,19 @@
                         <b class="arrow icon-angle-down"></b>
                     </a>
                     <ul class="submenu">
-                        <li class="active">
+                        <li>
                             <a href="/Nakri/feed/feedList">
                                 <i class="icon-double-angle-right"></i>
                                 潜客管理
                             </a>
                         </li>
-                        <li>
+                        <li >
                             <a href="/Nakri/feed/qualityDetail">
                                 <i class="icon-double-angle-right"></i>
                                 质量度管理
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/Nakri/feed/rateDetail">
                                 <i class="icon-double-angle-right"></i>
                                 资料跟进管理
@@ -140,7 +140,7 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="icon-home home-icon"></i>
-                        <a href="#">潜客分析</a>
+                        <a href="#">质量度管理</a>
                     </li>
 
                 </ul><!-- .breadcrumb -->
@@ -162,106 +162,38 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <div class="row12">
-                            <div class="well">
-                                <form action="#" method="post" id="queryForm" class="form-inline">
-                            <span class="input-icon align-middle">
-                            客户名称：
-                            <input id="companyName" name="companyName" type="text" class="search-query"
-                                   placeholder="输入客户名称"/>
-                            </span>
-                                    &nbsp;
-                                    <span class="input-icon align-middle">
-                            意向度得分：
-                            <select class="form-control-inline" id="operType" name="operType">
-                                    <option value="-1" selected>请选择</option>
-                                    <option value="1">大于</option>
-                                    <option value="2">小于</option>
-                                    <option value="3">等于</option>
-                                </select>
-                                         <input id="score" name="score" type="text" class="search-query"
-                                                placeholder="请输入分值"/>
-                            </span>
-                                    &nbsp;
-                                    <button class="btn btn-sm" type="submit">
-                                        <i class="icon-search"></i>查询
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
+
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="table-responsive">
                                     <table id="sample-table-2" class="table table-striped table-bordered table-hover">
                                         <thead>
                                         <tr>
-                                            <td class="center">
-                                                <label>
-                                                    <input type="checkbox" class="ace"/>
-                                                    <span class="lbl"></span>
-                                                </label>
-                                            </td>
-                                            </th>
-                                            <th>公司名称</th>
-                                            <th>所属行业</th>
-                                            <th>地域</th>
-                                            <th>是否来电咨询</th>
-                                            <th>是否做过推广</th>
-                                            <th>竞品投放广告</th>
-                                            <th>资料来源</th>
-                                            <th>操作</th>
+                                            <th class="hidden-480">销售</th>
+                                            <th class="hidden-480">线索</th>
+                                            <th>质量度评分</th>
+                                            <th>申领时间</th>
                                         </tr>
                                         </thead>
 
                                         <tbody>
                                         <c:forEach items="${feedList}" var="p">
                                             <tr>
-                                                <td class="center">
-                                                    <label>
-                                                        <input type="checkbox" class="ace"/>
-                                                        <span class="lbl"></span>
-                                                    </label>
+                                                <td>
+                                                        ${p.sale}
                                                 </td>
 
                                                 <td>
-                                                    ${p.companyName}
+                                                        ${p.companyName}
                                                 </td>
 
                                                 <td>
-                                                    ${p.trade}
-                                                </td>
-
-                                                <td>
-                                                    ${p.address}
+                                                        ${p.score}
                                                 </td>
                                                 <td>
-                                                    <c:if test="${p.isCall== 0}">
-                                                        <span class="label label-sm label-warning">Y</span>
-                                                    </c:if>
-                                                    <c:if test="${p.isCall == 1}">
-                                                        <span class="label label-sm label-success">N</span>
-                                                    </c:if>
+                                                        ${p.applTime}
+                                                </td>
 
-                                                </td>
-                                                <td class="hidden-480">
-                                                    <c:if test="${p.isTuiguang== 0}">
-                                                        <span class="label label-sm label-warning">Y</span>
-                                                    </c:if>
-                                                    <c:if test="${p.isTuiguang == 1}">
-                                                        <span class="label label-sm label-success">N</span>
-                                                    </c:if>
-
-                                                </td>
-                                                <td class="hidden-480">
-                                                    <c:if test="${p.isCompetitor== 0}">
-                                                        <span class="label label-sm label-warning">Y</span>
-                                                    </c:if>
-                                                    <c:if test="${p.isCompetitor == 1}">
-                                                        <span class="label label-sm label-success">N</span>
-                                                    </c:if>
-                                                </td>
-                                                <td> ${p.fromSource}</td>
-                                                <td><a href="/Nakri/feed/analysis?id= ${p.id}">分析</a></td>
                                             </tr>
                                         </c:forEach>
                                         </tbody>
