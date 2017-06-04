@@ -123,21 +123,21 @@ public class Jichuang2FeedController {
         feedCustVo4.setStar(4);
         feedCustVos.add(feedCustVo4);
 
-//        FeedCustVo feedCustVo5 = new FeedCustVo();
-//        feedCustVo5.setCompanyName("北京喜乐网络科技有限公司");
-//        feedCustVo5.setTrade("电脑硬件");
-//        feedCustVo5.setAddress("北京_北京");
-//        feedCustVo5.setContact("李先生(13790876755)");
-//        feedCustVo5.setStar(4);
-//        feedCustVos.add(feedCustVo5);
-//
-//        FeedCustVo feedCustVo6 = new FeedCustVo();
-//        feedCustVo6.setCompanyName("北京喜乐网络科技有限公司");
-//        feedCustVo6.setTrade("电脑硬件");
-//        feedCustVo6.setAddress("北京_北京");
-//        feedCustVo6.setContact("李先生(13790876755)");
-//        feedCustVo6.setStar(4);
-//        feedCustVos.add(feedCustVo6);
+        FeedCustVo feedCustVo5 = new FeedCustVo();
+        feedCustVo5.setCompanyName("厦门极致互动网络技术股份有限公司");
+        feedCustVo5.setTrade("软件游戏_游戏");
+        feedCustVo5.setAddress("福建_厦门");
+        feedCustVo5.setContact("陈博翔(0592-3167501)");
+        feedCustVo5.setStar(4);
+        feedCustVos.add(feedCustVo5);
+
+        FeedCustVo feedCustVo6 = new FeedCustVo();
+        feedCustVo6.setCompanyName("深圳市豆悦网络科技有限公司");
+        feedCustVo6.setTrade("软件游戏_游戏");
+        feedCustVo6.setAddress("广东_深圳");
+        feedCustVo6.setContact("瞿柳(18666019216)");
+        feedCustVo6.setStar(4);
+        feedCustVos.add(feedCustVo6);
 //
 //        FeedCustVo feedCustVo7 = new FeedCustVo();
 //        feedCustVo7.setCompanyName("北京喜乐网络科技有限公司");

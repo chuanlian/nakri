@@ -92,7 +92,7 @@
             <div class="center">
                 <h1>
                     <i class="icon-leaf green"></i>
-                    <span class="red">AI</span>
+                    <span class="red">AI&nbsp;&nbsp;</span>
                     <span class="white">正在分析……</span>
                 </h1>
                 <%--<h4 class="blue">&copy; Company Name</h4>--%>

@@ -12,7 +12,7 @@
 
     <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
-            <a href="#" class="navbar-brand">
+            <a href="/Nakri/jichuang2/showPortal" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
                     AI 智能推荐
