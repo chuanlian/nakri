@@ -67,9 +67,9 @@
                 <button type="button" class="close" data-dismiss="alert">
                     <i class="icon-remove"></i>
                 </button>
-                <i class="icon-envelope"></i>
+                <i class="icon-book"></i>
                 <strong class="green">
-                    推荐理由：
+                    &nbsp;推荐理由：
                 </strong>
                 ${recommended}
             </div>
