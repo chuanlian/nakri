@@ -103,21 +103,18 @@
                                     <td>
                                             ${p.contact}
                                     </td>
-                                    <td>
-                                        <c:if test="${p.star== 1}">
-                                            <span class="badge badge-grey">☆</span>
-                                        </c:if>
-                                        <c:if test="${p.star == 2}">
-                                            <span class="badge badge-yellow">☆☆</span>
-                                        </c:if>
+                                    <td align="center">
+
                                         <c:if test="${p.star == 3}">
-                                            <span class="badge badge-success">☆☆☆</span>
+                                            <%--<span class="badge badge-success">☆☆☆</span>--%>
+                                            <span class="label label-sm label-inverse">C</span>
                                         </c:if>
                                         <c:if test="${p.star == 4}">
-                                            <span class="badge badge-warning">☆☆☆☆</span>
+                                            <%--<span class="badge badge-warning">☆☆☆☆</span>--%>
+                                            <span class="label label-sm label-info">B</span>
                                         </c:if>
                                         <c:if test="${p.star == 5}">
-                                            <span class="badge badge-danger">☆☆☆☆☆</span>
+                                            <span class="label label-sm label-warning">A</span>
                                         </c:if>
 
                                     </td>

@@ -138,14 +138,14 @@ public class Jichuang2FeedController {
         feedCustVo6.setContact("瞿柳(18666019216)");
         feedCustVo6.setStar(4);
         feedCustVos.add(feedCustVo6);
-//
-//        FeedCustVo feedCustVo7 = new FeedCustVo();
-//        feedCustVo7.setCompanyName("北京喜乐网络科技有限公司");
-//        feedCustVo7.setTrade("电脑硬件");
-//        feedCustVo7.setAddress("北京_北京");
-//        feedCustVo7.setContact("李先生(13790876755)");
-//        feedCustVo7.setStar(3);
-//        feedCustVos.add(feedCustVo7);
+
+        FeedCustVo feedCustVo7 = new FeedCustVo();
+        feedCustVo7.setCompanyName("哈尔滨市南岗区环球雅思培训学校");
+        feedCustVo7.setTrade("教育培训_语言培训");
+        feedCustVo7.setAddress("黑龙江_哈尔滨");
+        feedCustVo7.setContact("王老师(0451-53607733)");
+        feedCustVo7.setStar(3);
+        feedCustVos.add(feedCustVo7);
 //
 //        FeedCustVo feedCustVo8 = new FeedCustVo();
 //        feedCustVo8.setCompanyName("北京喜乐网络科技有限公司");

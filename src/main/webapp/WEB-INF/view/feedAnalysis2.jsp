@@ -93,7 +93,7 @@
                 <h1>
                     <i class="icon-leaf green"></i>
                     <span class="red">AI&nbsp;&nbsp;</span>
-                    <span class="white">正在分析……</span>
+                    <span class="white">模型预测中……</span>
                 </h1>
                 <%--<h4 class="blue">&copy; Company Name</h4>--%>
             </div>

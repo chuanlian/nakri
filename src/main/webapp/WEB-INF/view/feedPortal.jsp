@@ -62,7 +62,7 @@
                         <h1>
                             <i class="icon-leaf green"></i>
                             <span class="red">AI</span>
-                            <span class="white">智能潜客推荐系统</span>
+                            <span class="white">FEED潜客智能预测</span>
                         </h1>
                         <%--<h4 class="blue">&copy; Company Name</h4>--%>
                     </div>
