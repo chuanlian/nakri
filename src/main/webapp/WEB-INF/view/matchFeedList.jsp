@@ -84,6 +84,7 @@
                                 <th>地域</th>
                                 <th>联系方式</th>
                                 <th class="hidden-480">推荐指数</th>
+                                <th>跟进建议</th>
                                 <th>操作</th>
                             </tr>
                             </thead>
@@ -104,7 +105,6 @@
                                             ${p.contact}
                                     </td>
                                     <td align="center">
-
                                         <c:if test="${p.star == 3}">
                                             <%--<span class="badge badge-success">☆☆☆</span>--%>
                                             <span class="label label-sm label-inverse">C</span>
@@ -118,13 +118,48 @@
                                         </c:if>
 
                                     </td>
+                                    <td align="center">
+                                        <c:if test="${p.star == 3}">
+                                            <%--<span class="badge badge-success">☆☆☆</span>--%>
+                                            <i class="message-star icon-star-empty light-grey"></i>
+                                            营销跟进
+                                        </c:if>
+                                        <c:if test="${p.star == 4}">
+                                            <%--<span class="badge badge-warning">☆☆☆☆</span>--%>
+                                            <i class="icon-warning-sign red"></i>
+                                            &nbsp;&nbsp;高优跟进
+                                        </c:if>
+                                        <c:if test="${p.star == 5}">
+                                            <i class="message-star icon-star orange2"></i>
+                                            &nbsp;&nbsp;重点关注
+                                        </c:if>
+
+                                    </td>
                                     <td>
-                                        <button class="btn btn-xs btn-success">
-                                            <i class="icon-ok bigger-120">&nbsp;跟进</i>
-                                        </button>
-                                        <button class="btn btn-xs btn-danger">
-                                            <i class="icon-remove-sign">&nbsp;不推荐</i>
-                                        </button>
+                                        <c:if test="${p.star == 3}">
+                                            <button class="btn btn-xs btn-purple">
+                                                <i class="icon-ok bigger-120">&nbsp;短信触达</i>
+                                            </button>
+                                            <button class="btn btn-xs btn-danger">
+                                                <i class="icon-remove-sign">&nbsp;不推荐</i>
+                                            </button>
+                                        </c:if>
+                                        <c:if test="${p.star == 4}">
+                                            <button class="btn btn-xs btn-success">
+                                                <i class="icon-ok bigger-120">&nbsp;销售跟进</i>
+                                            </button>
+                                            <button class="btn btn-xs btn-danger">
+                                                <i class="icon-remove-sign">&nbsp;不推荐</i>
+                                            </button>
+                                        </c:if>
+                                        <c:if test="${p.star == 5}">
+                                            <button class="btn btn-xs btn-success">
+                                                <i class="icon-ok bigger-120">&nbsp;销售跟进</i>
+                                            </button>
+                                            <button class="btn btn-xs btn-danger">
+                                                <i class="icon-remove-sign">&nbsp;不推荐</i>
+                                            </button>
+                                        </c:if>
 
                                     </td>
                                 </tr>
